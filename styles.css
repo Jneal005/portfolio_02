@@ -1,4 +1,3 @@
-/* styles.css */
 /* CSS Variables for Theming */
 :root {
     --bg-color: #fff;
@@ -22,6 +21,53 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
+/* Intro Animation Overlay */
+.intro {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOutIntro 1s ease forwards;
+    animation-delay: 3.5s;
+}
+
+.intro-content {
+    font-size: 3rem;
+    color: white;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeZoomIntro 1.5s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeZoomIntro {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOutIntro {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+/* Hide main content until intro fades */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Theme toggle button */
 #theme-toggle {
     position: fixed;
     top: 20px;
@@ -34,6 +80,9 @@ body {
     z-index: 1000;
 }
 
+/* ... (rest of your existing styles from before) ... */
+
+/* Hero */
 .hero {
     height: 100vh;
     position: relative;
@@ -42,7 +91,7 @@ body {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    background: linear-gradient(to right, #007bff, #00c6ff); /* Parallax base */
+    background: linear-gradient(to right, #007bff, #00c6ff);
 }
 
 #particles-js {
@@ -51,6 +100,14 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+.hero-gradient-layer {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(0,123,255,0.5), rgba(0,198,255,0.5));
+    pointer-events: none;
+    transition: transform 0.5s ease-out;
 }
 
 .hero-content {
@@ -63,232 +120,4 @@ body {
     height: 150px;
 }
 
-.btn {
-    background: var(--accent-color);
-    color: #fff;
-    padding: 10px 20px;
-    margin: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.skills-list ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-}
-
-.timeline {
-    position: relative;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.timeline-item {
-    display: flex;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.timeline-date {
-    flex: 0 0 150px;
-    font-weight: bold;
-}
-
-.timeline-content {
-    flex: 1;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background: var(--secondary-bg);
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.filter-buttons button {
-    margin: 5px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.filter-buttons .active {
-    background: var(--accent-color);
-    color: #fff;
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-form {
-    max-width: 600px;
-    margin: auto;
-}
-
-input, textarea {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.social-icons a {
-    margin: 10px;
-    color: var(--text-color);
-    font-size: 24px;
-}
-
-.map {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.map iframe {
-    width: 100%;
-    height: 300px;
-}
-
-footer {
-    background: var(--secondary-bg);
-    padding: 20px;
-    text-align: center;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--accent-color);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    display: none;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-content {
-    background: var(--bg-color);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-}
-
-.close {
-    cursor: pointer;
-    float: right;
-    font-size: 24px;
-}
-
-/* Parallax Effect */
-.hero {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .project-grid, .blog-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .timeline-item {
-        flex-direction: column;
-    }
-
-    .timeline-date {
-        flex: none;
-        margin-bottom: 5px;
-    }
-
-    .hero {
-        height: auto;
-        padding: 100px 20px;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .section {
-        padding: 40px 10px;
-    }
-
-    #theme-toggle {
-        top: 10px;
-        right: 10px;
-    }
-
-    #back-to-top {
-        bottom: 10px;
-        right: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .skills-list ul {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    }
-}
+/* Add other styles here from your existing CSS */
