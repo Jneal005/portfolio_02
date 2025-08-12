@@ -1,5 +1,17 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
+    // Handle intro animation completion:
+    // After intro fades out, show main content
+    const intro = document.querySelector('.intro');
+    const mainContent = document.getElementById('main-content');
+
+    intro.addEventListener('animationend', (e) => {
+        if (e.animationName === 'fadeOutIntro') {
+            intro.style.display = 'none';
+            mainContent.classList.remove('hidden');
+            mainContent.classList.add('visible');
+        }
+    });
+
     // Theme Toggle
     const toggle = document.getElementById('theme-toggle');
     const body = document.body;
@@ -77,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailsBtns = document.querySelectorAll('.details-btn');
     detailsBtns.forEach((btn, index) => {
         btn.addEventListener('click', () => {
-            // Placeholder details
             modal.querySelector('p').textContent = `Detailed info about Project ${index + 1}.`;
             modal.style.display = 'flex';
         });
