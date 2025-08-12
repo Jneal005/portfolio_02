@@ -1,30 +1,42 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of Jordan Neal, a computer scientist and emerging tech leader building impactful digital solutions.">
-    <meta name="keywords" content="software developer, computer scientist, portfolio, full-stack, web development, mobile apps">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jordan Neal - Software Developer Portfolio</title>
-    <!-- SEO meta tags -->
-    <link rel="canonical" href="https://yourwebsite.com">
-    <!-- CDNs -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Personal portfolio of Jordan Neal, a computer scientist and emerging tech leader building impactful digital solutions." />
+    <meta name="keywords" content="software developer, computer scientist, portfolio, full-stack, web development, mobile apps" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <!-- AOS for scroll animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
     <!-- Favicon -->
-    <link rel="icon" href="https://via.placeholder.com/32" type="image/x-icon">
+    <link rel="icon" href="https://via.placeholder.com/32" type="image/x-icon" />
 </head>
 <body>
+
+<!-- Intro animation overlay -->
+<div class="intro">
+    <div class="intro-content">Jordan Neal</div>
+</div>
+
+<!-- Main content -->
+<div id="main-content" class="main-content hidden">
     <!-- Theme Toggle -->
     <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
 
     <!-- Hero Header -->
     <header id="hero" class="hero">
         <div id="particles-js"></div>
+        <div class="hero-gradient-layer"></div>
         <div class="hero-content" data-aos="fade-up">
-            <img src="https://via.placeholder.com/150" alt="Professional photo of Jordan Neal" class="profile-photo">
+            <img src="https://via.placeholder.com/150" alt="Professional photo of Jordan Neal" class="profile-photo" />
             <h1>Jordan Neal</h1>
             <p id="tagline" class="tagline"></p>
             <div class="cta-buttons">
@@ -38,199 +50,27 @@
     <section id="about" class="section" data-aos="fade-right">
         <h2>About Me</h2>
         <p>I am a Software developer skilled in React, Python, and web/app development. Experienced in creating dynamic applications, looking to contribute and learn from innovative tech teams. Driven by and solution-oriented student with a passion for transforming ideas into creative digital solutions. Proven ability to lead teams and scale user-centric experiences. Demonstrating strong technical fluency combined with entrepreneurial initiative. Actively seeking opportunities to design, build and innovate new and existing technologies that create lasting impact.</p>
-        <div class="skills-list">
-            <h3>Technical Skills</h3>
-            <ul>
-                <li><i class="fab fa-python"></i> Python</li>
-                <li><i class="fab fa-js"></i> JavaScript</li>
-                <li><i class="fab fa-html5"></i> HTML</li>
-                <li><i class="fab fa-css3-alt"></i> CSS</li>
-                <li><i class="fab fa-react"></i> React</li>
-                <li><i class="fab fa-node-js"></i> Node.js</li>
-                <li><i class="fab fa-cuttlefish"></i> C++</li>
-                <li><i class="fas fa-brain"></i> TensorFlow</li>
-                <li><i class="fab fa-flutter"></i> Flutter</li>
-                <li><i class="fas fa-robot"></i> GPT/LLM</li>
-                <li><i class="fas fa-plug"></i> APIs</li>
-            </ul>
-        </div>
-        <div class="timeline">
-            <h3>Education & Experience</h3>
-            <div class="timeline-item">
-                <div class="timeline-date">Expected May 2028</div>
-                <div class="timeline-content">Bachelor of Science in Computer Science, North Carolina A&T State University</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Aug 2022 – Aug 2024</div>
-                <div class="timeline-content">Technical Intern, Road 2 Hire – Designed web and mobile apps, developed front-end for Flexie app, led teams</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Sep 2023 – May 2024</div>
-                <div class="timeline-content">Tech and Coding Fellow, Code2College – Engineered programs, developed games, won coding competition</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Jan 2023</div>
-                <div class="timeline-content">CTO & Co-Founder, Bliss Bakery – Won 1st place in pitch competition, used data for sales growth</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Aug 2018 – Aug 2022</div>
-                <div class="timeline-content">General Crew Lead, LB Lawn Care Services – Operated machinery, prioritized teamwork</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Aug 2022 – Aug 2023</div>
-                <div class="timeline-content">BOH Team Member, Chick-fil-A – Maintained performance in fast-paced environment</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">June 2025</div>
-                <div class="timeline-content">Volunteer, Heifer International – Empowered communities, provided support (70+ hours)</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Ongoing</div>
-                <div class="timeline-content">Member, National Society of Black Engineers (NSBE) – Participated in competitions, mentored peers</div>
-            </div>
-        </div>
+        <!-- ...rest of your content here... -->
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section" data-aos="fade-left">
-        <h2>Projects</h2>
-        <div class="filter-buttons">
-            <button data-category="all" class="active">All</button>
-            <button data-category="web">Web</button>
-            <button data-category="mobile">Mobile</button>
-            <button data-category="games">Games</button>
-        </div>
-        <div class="project-grid">
-            <div class="project-card" data-category="mobile">
-                <img src="https://via.placeholder.com/300x200" alt="Flexie App">
-                <h3>Flexie App</h3>
-                <p>Front-end development for an app helping teenagers (14-18) secure part-time work opportunities.</p>
-                <p>Tech: JavaScript, HTML, CSS, React</p>
-                <a href="https://example.com/flexie" target="_blank">Live Demo</a>
-                <a href="https://github.com/Jneal005/flexie" target="_blank">GitHub</a>
-                <button class="details-btn">Details</button>
-            </div>
-            <div class="project-card" data-category="web">
-                <img src="https://via.placeholder.com/300x200" alt="Web Apps">
-                <h3>Web Applications</h3>
-                <p>Designed various web applications using Python, JavaScript, HTML, and CSS.</p>
-                <p>Tech: Python, JavaScript, HTML, CSS</p>
-                <a href="https://example.com/web-apps" target="_blank">Live Demo</a>
-                <a href="https://github.com/Jneal005/web-apps" target="_blank">GitHub</a>
-                <button class="details-btn">Details</button>
-            </div>
-            <div class="project-card" data-category="mobile">
-                <img src="https://via.placeholder.com/300x200" alt="Mobile Apps">
-                <h3>Mobile Applications</h3>
-                <p>Developed mobile apps with Flutter and Expo for user-centric experiences.</p>
-                <p>Tech: Flutter, Expo, JavaScript</p>
-                <a href="https://example.com/mobile-apps" target="_blank">Live Demo</a>
-                <a href="https://github.com/Jneal005/mobile-apps" target="_blank">GitHub</a>
-                <button class="details-btn">Details</button>
-            </div>
-            <div class="project-card" data-category="games">
-                <img src="https://via.placeholder.com/300x200" alt="Video Games">
-                <h3>Playable Video Games & Simulations</h3>
-                <p>Developed games and simulations in C++, optimizing logic for performance.</p>
-                <p>Tech: C++, Object-Oriented Programming</p>
-                <a href="https://example.com/games" target="_blank">Live Demo</a>
-                <a href="https://github.com/Jneal005/games" target="_blank">GitHub</a>
-                <button class="details-btn">Details</button>
-            </div>
-            <div class="project-card" data-category="web">
-                <img src="https://via.placeholder.com/300x200" alt="Bliss Bakery Platform">
-                <h3>Bliss Bakery Platform</h3>
-                <p>Built a platform for on-the-go baking goods service, using data for lead generation and sales.</p>
-                <p>Tech: JavaScript, Node.js, APIs</p>
-                <a href="https://example.com/bliss-bakery" target="_blank">Live Demo</a>
-                <a href="https://github.com/Jneal005/bliss-bakery" target="_blank">GitHub</a>
-                <button class="details-btn">Details</button>
-            </div>
-        </div>
-    </section>
+    <!-- Add other sections here (Projects, Skills, Blog, Contact, Footer, etc.) -->
 
-    <!-- Skills -->
-    <section id="skills" class="section" data-aos="zoom-in">
-        <h2>Skills</h2>
-        <canvas id="skills-chart" width="400" height="400"></canvas>
-    </section>
+</div>
 
-    <!-- Blog -->
-    <section id="blog" class="section" data-aos="fade-up">
-        <h2>Blog</h2>
-        <div class="blog-grid">
-            <div class="blog-teaser">
-                <h3>Building Dynamic Web Apps with React and Python</h3>
-                <p>Exploring integration of front-end and back-end for scalable applications.</p>
-                <a href="#full-post-1">Read More</a>
-            </div>
-            <div class="blog-teaser">
-                <h3>Optimizing C++ for Game Development</h3>
-                <p>Tips on reducing latency and enhancing performance in simulations.</p>
-                <a href="#full-post-2">Read More</a>
-            </div>
-            <div class="blog-teaser">
-                <h3>Leveraging AI with TensorFlow and LLMs</h3>
-                <p>Getting started with machine learning for real-world projects.</p>
-                <a href="#full-post-3">Read More</a>
-            </div>
-            <div class="blog-teaser">
-                <h3>Mobile App Design with Flutter</h3>
-                <p>Creating user-centric mobile experiences cross-platform.</p>
-                <a href="#full-post-4">Read More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section" data-aos="fade-right">
-        <h2>Contact</h2>
-        <p>Charlotte, NC | Jordaneneal005@gmail.com | 704-303-3828</p>
-        <form id="contact-form" action="https://formspree.io/f/yourformid" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required aria-required="true">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required aria-required="true">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required aria-required="true"></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/jnealcompsci/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Jneal005" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        </div>
-        <div class="map">
-            <iframe width="600" height="450" frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Charlotte,NC" allowfullscreen aria-label="Google Map of Charlotte, NC"></iframe>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Jordan Neal. All rights reserved.</p>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
-    </footer>
-
-    <!-- Modals for Project Details -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Project Details</h3>
-            <p>Detailed description here.</p>
-        </div>
+<!-- Modals for Project Details -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Project Details</h3>
+        <p>Detailed description here.</p>
     </div>
+</div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.min.js"></script>
-    <script src="script.js"></script>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
