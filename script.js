@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Typing Effect
     const tagline = document.getElementById('tagline');
-    const text = 'Innovative Full-Stack Developer';
+    const text = 'Computer Scientist | Emerging Tech Leader | Builder of Impactful Digital Solutions';
     let i = 0;
     function type() {
         if (i < text.length) {
@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
     new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: ['HTML', 'CSS', 'JS', 'React', 'Node.js', 'Python'],
+            labels: ['Python', 'JavaScript', 'HTML/CSS', 'React', 'Node.js', 'C++', 'TensorFlow', 'Flutter'],
             datasets: [{
                 label: 'Proficiency',
-                data: [90, 85, 95, 80, 75, 70],
+                data: [90, 85, 90, 80, 75, 80, 70, 75],
                 backgroundColor: 'rgba(0, 123, 255, 0.2)',
                 borderColor: 'rgba(0, 123, 255, 1)',
                 borderWidth: 1
